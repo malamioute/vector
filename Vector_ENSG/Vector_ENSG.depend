@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1474792026 source:/media/sf_ENSG/exercices/vector/Vector_ENSG/main.cpp
+	<iostream>
+	"vectorensg.h"
+
+1474791907 /media/sf_ENSG/exercices/vector/Vector_ENSG/include/vectorensg.h
+	"stdlib.h"
+
+1474791786 source:/media/sf_ENSG/exercices/vector/Vector_ENSG/src/vectorensg.cpp
+	"vectorensg.h"
+	<string.h>
+
