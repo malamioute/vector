@@ -13,20 +13,20 @@ VectorENSG::~VectorENSG()
     delete [] m_vector;
 }
 
-VectorENSG::VectorENSG(const VectorENSG & array)
+VectorENSG::VectorENSG(const VectorENSG & v)
 {
-    operator=(array);
+    operator=(v);
 }
 
-VectorENSG & VectorENSG::operator=(const VectorENSG & array)
+VectorENSG & VectorENSG::operator=(const VectorENSG & v)
 {
     // Deals with self assignment
-    if (this != &array)
+    if (this != &v)
     {
         // Allocates the vector and copies content
-        size_t newSize = array.getSize();
+        size_t newSize = v.getSize();
         float * newVector = new float[newSize];
-        memcpy(newVector, array.m_vector, newSize * sizeof(float));
+        memcpy(newVector, v.m_vector, newSize * sizeof(float));
 
         // Deallocates the old vector
         delete [] m_vector;
@@ -42,17 +42,18 @@ VectorENSG & VectorENSG::operator=(const VectorENSG & array)
 void VectorENSG::operator=(float value)
 {
     size_t currentSize = getSize();
+
     for (size_t i = 0 ; i < currentSize ; i++)
         operator[](i) = value;
 }
 
-VectorENSG VectorENSG::operator+(const VectorENSG & array) const
+VectorENSG VectorENSG::operator+(const VectorENSG & v) const
 {
     size_t outputSize = getSize();
     VectorENSG output(outputSize);
 
     for (size_t i = 0 ; i < outputSize ; i++)
-        output[i] = operator[](i) + array[i];
+        output[i] = operator[](i) + v[i];
 
     return output;
 }

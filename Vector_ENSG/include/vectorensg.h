@@ -7,15 +7,15 @@ class VectorENSG
 {
 public:
     VectorENSG(size_t size);
-    VectorENSG(const VectorENSG & array);
+    VectorENSG(const VectorENSG & v);
     ~VectorENSG();
 
-    VectorENSG & operator=(const VectorENSG & array);
+    VectorENSG & operator=(const VectorENSG & v);
     void operator=(float value);
     float operator[](size_t i) const;
     float & operator[](size_t i);
 
-    VectorENSG operator+(const VectorENSG & array) const;
+    VectorENSG operator+(const VectorENSG & v) const;
     size_t getSize() const;
 
 private:
