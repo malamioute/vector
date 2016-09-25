@@ -14,6 +14,7 @@ public:
     void operator=(float value);
     float operator[](size_t i) const;
     float & operator[](size_t i);
+    bool operator==(const VectorENSG & v) const;
 
     VectorENSG operator+(const VectorENSG & v) const;
     size_t getSize() const;

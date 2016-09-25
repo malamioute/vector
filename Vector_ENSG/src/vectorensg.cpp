@@ -18,6 +18,29 @@ VectorENSG::VectorENSG(const VectorENSG & v)
     operator=(v);
 }
 
+bool VectorENSG::operator==(const VectorENSG & v) const
+{
+    bool isSame = true;
+
+    // Auto comparison
+    if (this != &v)
+    {
+        size_t i = 0, size = getSize();
+
+        // Checks vector sizes
+        isSame = (size == v.getSize());
+
+        // Loop over elements
+        while ((i < size) && isSame)
+        {
+            isSame = (operator[](i) == v[i]);
+            i++;
+        }
+    }
+
+    return isSame;
+}
+
 VectorENSG & VectorENSG::operator=(const VectorENSG & v)
 {
     // Deals with self assignment
