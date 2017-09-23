@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    size_t size = 20;
+    size_t size = 12;
     VectorENSG a(size);
     VectorENSG b(size);
 
