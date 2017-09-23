@@ -14,7 +14,7 @@ int main()
     VectorENSG c = a + b;
 
     for (size_t i = 0 ; i < size ; i++)
-        cout << "a[i]: " << a[i] << " - b[i]: " << b[i] << " - a[i] + b[i]: " << c[i] << endl;
+        cout << "a[i]: " << a[i] << " - b[i]: " << b[i] << " - a[i] * b[i]: " << c[i] << endl;
 
     return 0;
 }
