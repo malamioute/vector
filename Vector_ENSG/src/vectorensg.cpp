@@ -81,6 +81,17 @@ VectorENSG VectorENSG::operator+(const VectorENSG & v) const
     return output;
 }
 
+VectorENSG VectorENSG::operator-(const VectorENSG & v) const
+{
+    size_t outputSize = getSize();
+    VectorENSG output(outputSize);
+
+    for (size_t i = 0 ; i < outputSize ; i++)
+        output[i] = operator[](i) - v[i];
+
+    return output;
+}
+
 size_t VectorENSG::getSize() const
 {
     return m_size;

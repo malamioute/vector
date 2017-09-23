@@ -17,6 +17,7 @@ public:
     bool operator==(const VectorENSG & v) const;
 
     VectorENSG operator+(const VectorENSG & v) const;
+    VectorENSG operator-(const VectorENSG & v) const;
     size_t getSize() const;
 
 private:
